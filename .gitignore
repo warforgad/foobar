@@ -2,3 +2,4 @@ venv/
 *.pyc
 __cache__/
 .cache/
+*.coverage
