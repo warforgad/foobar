@@ -12,6 +12,8 @@ Foobar
    
    foo
    bar
+   code
+
 
 Indices and tables
 ==================
