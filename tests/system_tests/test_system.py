@@ -1,6 +1,4 @@
-import foobar, pytest, requests, socket
-from multiprocessing import Process
-from foobar.app import my_app
+import pytest, requests
 
 ip = '127.0.0.1'
 port = '8000'
