@@ -1,6 +1,6 @@
 import psycopg2
 
-host='db_server'
+host='db'
 port='5432'
 
 def foo():

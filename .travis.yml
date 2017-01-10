@@ -5,12 +5,12 @@ services:
 python:
   - "2.7"
   - "3.5"
-before_install:
-    - ./run_docker.sh
 install: 
     - "pip install -r requirements.txt"  
 # command to run tests
 script: 
-    - docker exec foobar_container pytest --cov=foobar /tests
+    - docker-compose build
+    - docker-compose up -d
+    - docker-compose exec foobar pytest --cov=foobar /tests
     - pytest ./tests/system_tests
-after_success: docker exec foobar_container coveralls
+after_success: docker-compose exec foobar coveralls

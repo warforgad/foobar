@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  foobar:
+    build: .
+    ports:
+    - "8000:80"
+    volumes:
+    - ./log:/log
+    depends_on:
+    - db
+  db:
+    image: postgres
+    ports:
+    - "9000:5432"
