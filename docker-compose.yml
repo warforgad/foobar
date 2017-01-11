@@ -9,6 +9,8 @@ services:
     - ./log:/log
     depends_on:
     - db
+    links:
+    - db
   db:
     image: postgres
     ports:
