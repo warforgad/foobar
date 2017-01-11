@@ -11,6 +11,7 @@ install:
 script: 
     - docker-compose build
     - docker-compose up -d
+    - sleep 5
     - docker-compose exec foobar pytest --cov=foobar /tests
     - pytest ./tests/system_tests
 after_success: docker-compose exec foobar coveralls

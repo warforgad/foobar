@@ -7,8 +7,6 @@ services:
     - "8000:80"
     volumes:
     - ./log:/log
-    depends_on:
-    - db
     links:
     - db
   db:
